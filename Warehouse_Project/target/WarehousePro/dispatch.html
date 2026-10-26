@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dispatch - WarehousePro</title>
+
+    <link rel="stylesheet" href="style.css?v=20261007-edit">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">📦</div>
+
+        <span>
+            Warehouse<span class="blue">Pro</span>
+        </span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="warehouse.html">Home</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="orders.html">Orders</a>
+
+        <a href="inventory.html">Inventory</a>
+
+        <a href="customers.html">Customers</a>
+
+        <a href="warehouses.html">Warehouses</a>
+
+        <a href="dispatch.html" class="active">
+            Dispatch
+        </a>
+
+    </nav>
+
+
+    <a href="logout" class="login-btn">
+        👤logout
+    </a>
+
+</header>
+
+
+
+<main class="page">
+
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>Dispatch</h1>
+
+            <p>
+                Manage package dispatch and shipments.
+            </p>
+
+        </div>
+
+
+        <button
+            class="primary-btn"
+            onclick="showForm('dispatchForm')">
+
+            + Add Dispatch
+
+        </button>
+
+    </div>
+
+
+
+    <div
+        class="form-box hidden"
+        id="dispatchForm">
+
+        <h2>Add Dispatch</h2>
+
+
+        <form onsubmit="addDispatch(event)">
+
+
+            <select
+                id="dispatchOrder"
+                name="orderId"
+                required>
+                <option value="">Choose order</option>
+            </select>
+
+
+            <input
+                type="text"
+                id="dispatchCarrier"
+                name="carrier"
+                placeholder="Delivery Carrier"
+                required
+            >
+
+
+            <input
+                type="text"
+                id="dispatchTracking"
+                name="tracking"
+                placeholder="Tracking Number"
+                required
+            >
+
+
+            <select id="dispatchStatus" name="status">
+
+                <option value="Ready">
+                    Ready
+                </option>
+
+                <option value="Shipped">
+                    Shipped
+                </option>
+
+                <option value="Delivered">
+                    Delivered
+                </option>
+
+            </select>
+
+
+            <button
+                class="primary-btn"
+                type="submit">
+
+                Save Dispatch
+
+            </button>
+
+
+            <button
+                type="button"
+                class="cancel-btn"
+                onclick="hideForm('dispatchForm')">
+
+                Cancel
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+
+    <div class="table-box">
+
+        <h2>Dispatch List</h2>
+
+        <form class="table-search" onsubmit="return searchTable(event, 'dispatchTable', 'dispatchSearch')">
+            <label for="dispatchSearch">Search dispatches</label>
+            <input type="search" id="dispatchSearch" placeholder="Order ID, carrier, tracking, status...">
+            <button class="primary-btn" type="submit">Search</button>
+        </form>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Order ID</th>
+
+                    <th>Carrier</th>
+
+                    <th>Tracking</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="dispatchTable">
+
+                <tr>
+
+                    <td colspan="6">
+                        Loading dispatches...
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+</main>
+
+
+<script src="app.js?v=20261007-edit"></script>
+
+</body>
+
+</html>

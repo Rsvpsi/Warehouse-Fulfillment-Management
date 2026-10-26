@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Sign Up - Warehouse Pro</title>
+
+    <link rel="stylesheet" href="signup.css?v=signup-title">
+
+
+</head>
+
+
+<body class="signup-page">
+
+
+    <div class="signup-container">
+
+
+        <!-- Logo -->
+
+        <div class="signup-logo">
+
+            <div class="logo-icon">
+                                               📦
+
+            </div>
+
+            <h1>
+           Warehouse<span>Pro</span>
+            </h1>
+
+            <p>
+                Warehouse Fulfillment Management
+            </p>
+
+        </div>
+
+
+        <!-- Signup Box -->
+
+        <div class="signup-box">
+
+            <h2 class="signup-title">Create Admin Account</h2>
+
+            <p class="subtitle">
+                Register a new warehouse administrator
+            </p>
+
+
+           <form id="signupForm" action="signup" method="post">
+
+
+                <!-- Admin Name -->
+
+                <div class="input-group">
+
+                    <label for="adminName">
+                        Admin Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="adminName"
+                        name="adminName"
+                        placeholder="Enter admin name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Admin email ID -->
+
+                <div class="input-group">
+
+                    <label for="adminId">
+                        Admin email ID
+                    </label>
+                    <input
+                        type="email"
+                        id="adminEmailId"
+                        name="adminEmailId"
+                        placeholder="Enter admin email ID"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Phone Number -->
+
+                <div class="input-group">
+
+                    <label for="phone">
+                        Admin Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter phone number"
+                        maxlength="10"
+                        pattern="[0-9]{10}"
+                        inputmode="numeric"
+                        required
+                    >
+                    <small>Enter 10 digits only, without a country code.</small>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        minlength="8"
+                        required
+                    >
+                    <small>Use at least 8 characters.</small>
+
+                </div>
+
+
+                <!-- Create Account Button -->
+
+                <button
+                    type="submit"
+                    class="create-btn">
+
+                    Create Admin Account
+
+                </button>
+
+
+                <p
+                    id="signupMessage"
+                    class="signup-message">
+                </p>
+
+
+            </form>
+
+
+            <!-- Back to Login -->
+
+            <a
+                href="login.html"
+                class="back-login">
+
+                ← Already have an account? Login
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

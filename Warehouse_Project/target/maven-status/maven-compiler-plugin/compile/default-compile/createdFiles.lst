@@ -1,0 +1,10 @@
+com\warehouse\WarehouseApiServlet$Resource.class
+com\warehouse\LoginServlet.class
+com\warehouse\LogoutServlet.class
+com\warehouse\ProductServlet.class
+com\warehouse\SignupServlet.class
+com\warehouse\AuthenticationFilter.class
+com\warehouse\TestConnection.class
+com\warehouse\DBConnection.class
+com\warehouse\PasswordUtil.class
+com\warehouse\WarehouseApiServlet.class
